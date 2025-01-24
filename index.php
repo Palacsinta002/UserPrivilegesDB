@@ -9,6 +9,7 @@
     <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="POST">
         <select name="users" id="users">
          <?php 
+            require "getUserPrivilege.php"; 
             for($i = 0; $i < count($list); $i++) { 
                 echo "<option value="$i"></option>"
             }
