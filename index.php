@@ -7,14 +7,20 @@
 </head>
 <body>
     <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="POST">
-        <select name="users" id="users">
-         <?php 
-            require "getUserPrivilege.php"; 
-            for($i = 0; $i < count($list); $i++) { 
-                echo "<option value="$i"></option>"
-            }
-         ?>
-        </select>
+        <table>
+            <tr>
+                <td>User:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Lekérdez"></td>
+            </tr>
+        </table>
     </form>
+    <?php
+        if($_SERVER['REQUEST_METHOD'] = "POST"){
+            require_once "getUserPrivilege.php";
+        }
+    ?>
 </body>
 </html>
