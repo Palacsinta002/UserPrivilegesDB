@@ -10,7 +10,7 @@
         <table>
             <tr>
                 <td>User:</td>
-                <td><input type="text"></td>
+                <td><input type="text" name="user"></td>
             </tr>
             <tr>
                 <td><input type="submit" value="Lekérdez"></td>
