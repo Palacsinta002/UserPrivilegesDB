@@ -6,7 +6,7 @@ $dbname = 'UserPrivilegesDB';
 
 
 $userToSearch = 'username';  
-$hostToSearch = 'localhost';  
+$hostToSearch = '%';  
 
 
 $conn = new mysqli($host, $username, $password, $dbname);
@@ -17,11 +17,11 @@ if ($conn->connect_error) {
 }
 
 $userToSearch = $_POST["user"];
-$hostToSearch = "localhost";
-$sql = "SELECT * FROM USER_PRIVILEGES WHERE GRANTEE = \"'{$userToSearch}'@'{$hostToSearch}'\"";
+$hostToSearch = "%";
+$sql = "SELECT * FROM information_schema.user_privileges WHERE GRANTEE = \"'{$userToSearch}'@'{$hostToSearch}'\"";
 
 
-$result = $conn->query($sql);
+$result = $conn->query($sql);   
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {

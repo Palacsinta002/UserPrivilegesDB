@@ -11,7 +11,7 @@ create table Books(
 
 -- owner can Select, insert, update, delete create, drop and alter
 CREATE USER owner@"%" IDENTIFIED BY "owner";
-GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER ON *.* TO owner@"%";
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER ON userprivilagesdb.* TO owner@"%";
 
 -- admin can't drop
 CREATE USER administrator@"%" IDENTIFIED BY "administrator";
