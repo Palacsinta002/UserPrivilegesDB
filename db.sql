@@ -1,6 +1,8 @@
-create database UserPrivilegesDB
+create database if not exists UserPrivilegesDB
 default character set utf8
 collate utf8_hungarian_ci;
+
+use UserPrivilegesDB;
 
 create table Books(
     id int primary key auto_increment,
